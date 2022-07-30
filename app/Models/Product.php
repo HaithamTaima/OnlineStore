@@ -11,12 +11,10 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
-use Nicolaslopezj\Searchable\SearchableTrait;
 
 class Product extends Model
 {
-    use HasFactory, Sluggable,SearchableTrait;
-
+    use HasFactory, Sluggable;
     protected $guarded = [];
 
     public function sluggable(): array
