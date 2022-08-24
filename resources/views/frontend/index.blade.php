@@ -33,7 +33,7 @@
                 </a>
                 <a class="category-item" href="{{ route('frontend.shop', $product_categories[2]->slug) }}">
                     <img class="img-fluid" src="{{ asset('assets/product_categories/' . $product_categories[2]->cover) }}" alt="">
-                    <strong class="category-item-title">Watches</strong>
+                    <strong class="category-item-title">Hardware</strong>
                 </a>
             </div>
             <div class="col-md-4">

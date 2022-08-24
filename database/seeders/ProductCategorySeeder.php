@@ -15,25 +15,32 @@ class ProductCategorySeeder extends Seeder
      */
     public function run()
     {
-        $clothes = ProductCategory::create(['name' => 'LapTop', 'cover' => 'clothes.jpg', 'status' => true, 'parent_id' => null]);
-        ProductCategory::create(['name' => 'HP', 'cover' => 'clothes.jpg', 'status' => true, 'parent_id' => $clothes->id]);
-        ProductCategory::create(['name' => 'Asus', 'cover' => 'clothes.jpg', 'status' => true, 'parent_id' => $clothes->id]);
-        ProductCategory::create(['name' => 'Dresses', 'cover' => 'clothes.jpg', 'status' => true, 'parent_id' => $clothes->id]);
-        ProductCategory::create(['name' => 'Novelty ', 'cover' => 'clothes.jpg', 'status' => true, 'parent_id' => $clothes->id]);
-        ProductCategory::create(['name' => 'Women', 'cover' => 'clothes.jpg', 'status' => true, 'parent_id' => $clothes->id]);
-        ProductCategory::create(['name' => 'Men', 'cover' => 'clothes.jpg', 'status' => true, 'parent_id' => $clothes->id]);
+        $laptop = ProductCategory::create(['name' => 'LapTop', 'cover' => 'laptop.jpg', 'status' => true, 'parent_id' => null]);
+        ProductCategory::create(['name' => 'HP', 'cover' => 'laptop.jpg', 'status' => true, 'parent_id' => $laptop->id]);
+        ProductCategory::create(['name' => 'Asus', 'cover' => 'laptop.jpg', 'status' => true, 'parent_id' => $laptop->id]);
+        ProductCategory::create(['name' => 'Apple', 'cover' => 'laptop.jpg', 'status' => true, 'parent_id' => $laptop->id]);
+        ProductCategory::create(['name' => 'Dell ', 'cover' => 'laptop.jpg', 'status' => true, 'parent_id' => $laptop->id]);
+        ProductCategory::create(['name' => 'Lenovo', 'cover' => 'laptop.jpg', 'status' => true, 'parent_id' => $laptop->id]);
+        ProductCategory::create(['name' => 'Acer', 'cover' => 'laptop.jpg', 'status' => true, 'parent_id' => $laptop->id]);
+        ProductCategory::create(['name' => 'MSI', 'cover' => 'laptop.jpg', 'status' => true, 'parent_id' => $laptop->id]);
+        ProductCategory::create(['name' => 'Razer', 'cover' => 'laptop.jpg', 'status' => true, 'parent_id' => $laptop->id]);
 
-        $shoes = ProductCategory::create(['name' => 'Phone', 'cover' => 'shoes.jpg', 'status' => true]);
-        ProductCategory::create(['name' => 'Women', 'cover' => 'shoes.jpg', 'status' => true, 'parent_id' => $shoes->id]);
-        ProductCategory::create(['name' => 'Men', 'cover' => 'shoes.jpg', 'status' => true, 'parent_id' => $shoes->id]);
-        ProductCategory::create(['name' => 'Boy', 'cover' => 'shoes.jpg', 'status' => true, 'parent_id' => $shoes->id]);
-        ProductCategory::create(['name' => 'Girls', 'cover' => 'shoes.jpg', 'status' => true, 'parent_id' => $shoes->id]);
+        $phone = ProductCategory::create(['name' => 'Phone', 'cover' => 'phone.jpg', 'status' => true]);
+        ProductCategory::create(['name' => 'Apple', 'cover' => 'phone.jpg', 'status' => true, 'parent_id' => $phone->id]);
+        ProductCategory::create(['name' => 'Samsung', 'cover' => 'phone.jpg', 'status' => true, 'parent_id' => $phone->id]);
+        ProductCategory::create(['name' => 'Huawei', 'cover' => 'phone.jpg', 'status' => true, 'parent_id' => $phone->id]);
+        ProductCategory::create(['name' => 'Oppo', 'cover' => 'phone.jpg', 'status' => true, 'parent_id' => $phone->id]);
+        ProductCategory::create(['name' => 'Xiaomi', 'cover' => 'phone.jpg', 'status' => true, 'parent_id' => $phone->id]);
+        ProductCategory::create(['name' => 'Nokia', 'cover' => 'phone.jpg', 'status' => true, 'parent_id' => $phone->id]);
 
-        $watches = ProductCategory::create(['name' => 'Watches', 'cover' => 'watches.jpg', 'status' => true]);
-        ProductCategory::create(['name' => 'Women', 'cover' => 'shoes.jpg', 'status' => true, 'parent_id' => $watches->id]);
-        ProductCategory::create(['name' => 'Men', 'cover' => 'shoes.jpg', 'status' => true, 'parent_id' => $watches->id]);
-        ProductCategory::create(['name' => 'Boy', 'cover' => 'shoes.jpg', 'status' => true, 'parent_id' => $watches->id]);
-        ProductCategory::create(['name' => 'Girls', 'cover' => 'shoes.jpg', 'status' => true, 'parent_id' => $watches->id]);
+        $hardware = ProductCategory::create(['name' => 'Hardware', 'cover' => 'phone.jpg', 'status' => true]);
+        ProductCategory::create(['name' => 'Motherboards', 'cover' => 'hardware.jpg', 'status' => true, 'parent_id' => $hardware->id]);
+        ProductCategory::create(['name' => 'CPU', 'cover' => 'hardware.jpg', 'status' => true, 'parent_id' => $hardware->id]);
+        ProductCategory::create(['name' => 'RAM', 'cover' => 'hardware.jpg', 'status' => true, 'parent_id' => $hardware->id]);
+        ProductCategory::create(['name' => 'Graphics Cards', 'cover' => 'hardware.jpg', 'status' => true, 'parent_id' => $hardware->id]);
+        ProductCategory::create(['name' => 'Monitors', 'cover' => 'hardware.jpg', 'status' => true, 'parent_id' => $hardware->id]);
+        ProductCategory::create(['name' => 'DeskTops', 'cover' => 'hardware.jpg', 'status' => true, 'parent_id' => $hardware->id]);
+
 
         $electronics = ProductCategory::create(['name' => 'Electronics', 'cover' => 'electronics.jpg', 'status' => true]);
         ProductCategory::create(['name' => 'Electronics', 'cover' => 'electronics.jpg', 'status' => true, 'parent_id' => $electronics->id]);

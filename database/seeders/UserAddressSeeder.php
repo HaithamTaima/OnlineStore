@@ -22,7 +22,7 @@ class UserAddressSeeder extends Seeder
         Schema::disableForeignKeyConstraints();
         $faker = Factory::create();
 
-        $sami   = User::whereUsername('sami')->first();
+        $sami   = User::whereUsername('Haitham')->first();
         $ksa   = Country::with('states')->whereId(194)->first();
         $state = $ksa->states->random()->id;
         $city = City::whereStateId($state)->inRandomOrder()->first()->id;
@@ -30,8 +30,8 @@ class UserAddressSeeder extends Seeder
         $sami->addresses()->create([
             'address_title'         => 'Home',
             'default_address'       => true,
-            'first_name'            => 'Sami',
-            'last_name'             => 'Mansour',
+            'first_name'            => 'Haitham',
+            'last_name'             => 'Taima',
             'email'                 => $faker->email,
             'mobile'                => $faker->phoneNumber,
             'address'               => $faker->address,
@@ -47,8 +47,8 @@ class UserAddressSeeder extends Seeder
         $sami->addresses()->create([
             'address_title'         => 'Work',
             'default_address'       => false,
-            'first_name'            => 'Sami',
-            'last_name'             => 'Mansour',
+            'first_name'            => 'Haitham',
+            'last_name'             => 'Taima',
             'email'                 => $faker->email,
             'mobile'                => $faker->phoneNumber,
             'address'               => $faker->address,

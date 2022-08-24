@@ -105,7 +105,7 @@
                 </div>
 
                 <div class="form-group pt-4">
-                    <button type="submit" name="submit" class="btn btn-primary">Add Product</button>
+                    <button type="submit" name="submit" class="btn btn-primary">Update Product</button>
                 </div>
             </form>
         </div>

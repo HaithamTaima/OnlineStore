@@ -18,7 +18,7 @@ class WorldSeeder extends Seeder
             'host' => '127.0.0.1',
             'database' => 'course_ecommerce',
             'username' => 'root',
-            'password' => null,
+            'password' => 'Ha$root0595791332',
         ];
 
         exec("mysql --user={$db['username']} --password={$db['password']} --host={$db['host']} --database={$db['database']} < $sql_file");
