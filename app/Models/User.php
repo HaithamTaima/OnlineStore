@@ -7,12 +7,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Passport\HasApiTokens;
 use Mindscms\Entrust\Traits\EntrustUserWithPermissionsTrait;
 use Nicolaslopezj\Searchable\SearchableTrait;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasFactory, Notifiable, SearchableTrait, EntrustUserWithPermissionsTrait;
+    use  HasApiTokens,  HasFactory, Notifiable, SearchableTrait, EntrustUserWithPermissionsTrait;
 
     /**
      * The attributes that are mass assignable.

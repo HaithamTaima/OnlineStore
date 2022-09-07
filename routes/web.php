@@ -14,13 +14,6 @@ use Meneses\LaravelMpdf\Facades\LaravelMpdf as PDF;
 Route::get('/',[Frontend\FrontendController::class,'index'])->name('frontend.index');
 
 
-
-
-
-
-
-
-
 Route::get('/shop/{slug?}', [Frontend\FrontendController::class, 'shop'])->name('frontend.shop');
 Route::get('/shop/tags/{slug}', [Frontend\FrontendController::class, 'shop_tag'])->name('frontend.shop_tag');Route::get('/product/{slug?}', [FrontendController::class, 'product'])->name('frontend.product');
 Route::get('/product/{slug?}', [Frontend\FrontendController::class, 'product'])->name('frontend.product');

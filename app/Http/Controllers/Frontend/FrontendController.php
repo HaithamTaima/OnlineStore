@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\ProductCategory;
+use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
@@ -36,6 +37,7 @@ class FrontendController extends Controller
         })->inRandomOrder()->Active()->HasQuantity()->take(4)->get();
         return view('frontend.product', compact('product', 'relatedProducts'));
     }
+
     public function cart ()
     {
         return view('frontend.cart');
@@ -45,6 +47,27 @@ class FrontendController extends Controller
     {
         return view('frontend.wishlist');
     }
+
+//    public function search(Request $request)
+//    {
+//        $keyword = isset($request->keyword) && $request->keyword != '' ? $request->keyword : null;
+//
+//        $posts = Product::with(['media', 'user', 'tags'])
+//            ->whereHas('category', function ($query) {
+//                $query->whereStatus(1);
+//            })
+//            ->whereHas('user', function ($query) {
+//                $query->whereStatus(1);
+//            });
+//
+//        if ($keyword != null) {
+//            $posts = $posts->search($keyword, null, true);
+//        }
+//
+//        $posts = $posts->post()->active()->orderBy('id', 'desc')->paginate(5);
+//
+//        return view('frontend.index', compact('posts'));
+//    }
 
 
 

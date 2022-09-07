@@ -6,9 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Models\Role;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use http\Env\Response;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image;
 
 class RegisterController extends Controller
 {
@@ -77,8 +81,33 @@ class RegisterController extends Controller
             'mobile' => $data['mobile'],
             'user_image' => 'avatar.svg'
         ]);
+
+        if (isset($data['user_image'])) {
+            if ($image = $data['user_image']){
+                $filename = Str::slug($data['username']) . '.' . $image->getClientOriginalExtension();
+                $path = public_path('/assets/users/' . $filename);
+                Image::make($image->getRealPath())->resize(300, 300, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save($path, 100);
+                $customer->update(['user_image' => $filename]);
+            }
+        }
         $customer->attachRole(Role::whereName('customer')->first()->id);
 
         return $customer;
+    }
+    protected function registered(Request $request, $user)
+    {
+        if ($request->wantsJson()){
+            return response()->json([
+                'errors'=>false,
+                'message' => 'Your account registered successfully, Please check your email to activate your account.',
+            ]);
+        }
+
+        return redirect()->route('frontend.index')->with([
+            'message' => 'Your account registered successfully, Please check your email to activate your account.',
+            'alert-type' => 'success'
+        ]);
     }
 }

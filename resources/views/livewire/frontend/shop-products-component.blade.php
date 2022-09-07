@@ -1,3 +1,4 @@
+<form action="{{ route('admin.products.index') }}" method="get">
 <div>
     <section class="py-5">
         <div class="container p-0">
@@ -53,6 +54,15 @@
                                         <i class="fas fa-th"></i>
                                     </a>
                                 </li>
+
+
+         <input type="text" name="keyword" value="{{ old('keyword', request()->input('keyword')) }}">
+
+        <button type="submit" name="submit" class="btn btn-link">Search</button>
+
+
+
+
                                 <li class="list-inline-item" wire:ignore>
                                     <select class="selectpicker ml-auto" wire:model="sortingBy" data-width="200" data-style="bs-select-form-control" data-title="Default sorting">
                                         <option value="default">Default sorting</option>
