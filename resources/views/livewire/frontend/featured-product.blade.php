@@ -22,7 +22,7 @@
                                             <i class="far fa-heart"></i>
                                         </a></li>
                                     <li class="list-inline-item m-0 p-0">
-                                        <a wire:click.prevent="addToCart({{ $featuredProduct->id }})" class="btn btn-sm btn-dark">Add to cart</a>
+                                        <a wire:click.prevent="addToCart({{ $featuredProduct->id }})" class="btn btn-sm btn-dark text-light">Add to cart</a>
                                     </li>
                                     <li class="list-inline-item mr-0">
                                         <a
@@ -44,10 +44,9 @@
                         <p class="small text-muted">${{ $featuredProduct->price }}</p>
                     </div>
                 </div>
+
             @empty
             @endforelse
-
-
         </div>
 
     </section>

@@ -33,5 +33,5 @@ Route::group(['middleware' => ['auth:api']], function () {
 
 });
 
-Route::get('/all_product',                        [GeneralController::class, 'get_product']);
+Route::get('/all_product/{slug?}',                        [GeneralController::class, 'get_product']);
 

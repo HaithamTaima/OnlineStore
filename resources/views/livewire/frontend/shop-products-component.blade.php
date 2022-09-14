@@ -91,7 +91,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="list-inline-item m-0 p-0">
-                                                    <a wire:click.prevent="addToCart('{{ $product->id }}')" class="btn btn-sm btn-dark">
+                                                    <a wire:click.prevent="addToCart('{{ $product->id }}')" class="btn btn-sm btn-dark text-light">
                                                         Add to cart
                                                     </a>
                                                 </li>

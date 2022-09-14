@@ -96,6 +96,18 @@ class RegisterController extends Controller
 
         return $customer;
     }
+
+
+
+
+
+
+
+
+
+
+
+
     protected function registered(Request $request, $user)
     {
         if ($request->wantsJson()){

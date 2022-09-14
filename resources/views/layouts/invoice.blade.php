@@ -115,7 +115,7 @@
                 <table>
                     <tr>
                         <td class="title">
-                            <img src="{{ base_path('public/frontend/img/logo.png') }}" style="width: 100%; max-width: 70px" />
+                            <img src="{{ base_path('public/frontend/img/favicon.png') }}" style="width: 100%; max-width: 70px" />
                         </td>
                         <td></td>
                         <td>
@@ -133,9 +133,9 @@
                 <table>
                     <tr>
                         <td>
-                            MindsCMS<br />
-                            12345 Jeddah<br />
-                            Jeddah, SA 12345
+                            Haitham<br />
+                            12345 Gaza<br />
+                            Gaza, Ps 12345
                         </td>
                         <td></td>
                         <td>

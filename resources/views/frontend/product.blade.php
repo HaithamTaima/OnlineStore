@@ -40,11 +40,7 @@
                                 </li>
                             @endfor
                         @else
-                            <li class="list-inline-item m-0"><i class="far fa-star fa-sm text-warning"></i></li>
-                            <li class="list-inline-item m-0"><i class="far fa-star fa-sm text-warning"></i></li>
-                            <li class="list-inline-item m-0"><i class="far fa-star fa-sm text-warning"></i></li>
-                            <li class="list-inline-item m-0"><i class="far fa-star fa-sm text-warning"></i></li>
-                            <li class="list-inline-item m-0"><i class="far fa-star fa-sm text-warning"></i></li>
+
                         @endif
                     </ul>
                     <h1>{{ $product->name }}</h1>

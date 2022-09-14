@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="col-sm-3 pl-sm-0">
-            <a wire:click="addToCart()" class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0">
+            <a wire:click="addToCart()" class="btn btn-dark text-light btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0">
                 Add to cart
             </a>
         </div>

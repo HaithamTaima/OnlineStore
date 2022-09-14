@@ -29,19 +29,7 @@
                         <div class="col-lg-6">
                             <button class="close p-4" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                             <div wire:ignore class="p-5 my-md-4">
-                                <ul class="list-inline mb-2">
-                                    @if ($productModal->reviews_avg_rating != '')
-                                        @for ($i = 0; $i < 5; $i++)
-                                            <li class="list-inline-item m-0"><i class="{{ round($productModal->reviews_avg_rating) <= $i ? 'far' : 'fas' }} fa-star fa-sm text-warning"></i></li>
-                                        @endfor
-                                    @else
-                                        <li class="list-inline-item m-0"><i class="far fa-star fa-sm text-warning"></i></li>
-                                        <li class="list-inline-item m-0"><i class="far fa-star fa-sm text-warning"></i></li>
-                                        <li class="list-inline-item m-0"><i class="far fa-star fa-sm text-warning"></i></li>
-                                        <li class="list-inline-item m-0"><i class="far fa-star fa-sm text-warning"></i></li>
-                                        <li class="list-inline-item m-0"><i class="far fa-star fa-sm text-warning"></i></li>
-                                    @endif
-                                </ul>
+
                                 <h2 class="h4">{{ $productModal->name }}</h2>
                                 <p class="text-muted">${{ $productModal->price }}</p>
                                 <p class="text-small mb-4">
@@ -58,7 +46,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-5 pl-sm-0">
-                                        <a wire:click="addToCart()" class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0">
+                                        <a wire:click="addToCart()" class="btn btn-dark text-light btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0">
                                             Add to cart
                                         </a>
                                     </div>

@@ -10,6 +10,7 @@ use App\Models\Category;
 use App\Models\Contact;
 use App\Models\Post;
 use App\Models\Product;
+use App\Models\ProductCategory;
 use App\Models\Tag;
 use App\Models\User;
 use App\Notifications\NewCommentForAdminNotify;
@@ -21,8 +22,21 @@ use Stevebauman\Purify\Facades\Purify;
 class GeneralController extends Controller
 {
 
-    public function get_product()
+    public function get_product($slug)
     {
+        $product = Product::with('media', 'category', 'tags', 'reviews')->withAvg('reviews', 'rating')->whereSlug($slug)
+            ->Active()->HasQuantity()->ActiveCategory()->firstOrFail();
+
+        $relatedProducts = Product::with('firstMedia')->whereHas('category', function ($query) use ($product) {
+            $query->whereId($product->product_category_id);
+            $query->whereStatus(true);
+        })->inRandomOrder()->Active()->HasQuantity()->take(4)->get();
+        if ($product->count() > 0) {
+            return ProductResource::collection($product);
+        } else {
+            return response()->json(['error' => true, 'message'=> 'No posts found'], 201);
+        }
+
 
     }
     public function category()
