@@ -5,7 +5,7 @@
             <div class="row">
                 <!-- SHOP SIDEBAR-->
                 <div class="col-lg-3 order-2 order-lg-1">
-                    <h5 class="text-uppercase mb-4">Categories</h5>
+                    <h5 class="text-uppercase mb-4">Shop by Category</h5>
                     @foreach($shop_categories_menu as $shop_category)
                         <div class="py-2 px-4 bg-dark text-white mb-3">
                             <strong class="small text-uppercase font-weight-bold">
@@ -24,7 +24,7 @@
                         </ul>
                     @endforeach
 
-                    <h5 class="text-uppercase mb-4">Tags</h5>
+                    <h5 class="text-uppercase mb-4">Shop by Tags</h5>
                     <ul class="list-unstyled small text-muted pl-lg-4 font-weight-normal">
                         @forelse($shop_tags_menu as $shop_tag)
                             <li class="mb-2">

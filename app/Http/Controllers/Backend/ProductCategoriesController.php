@@ -12,6 +12,7 @@ use Intervention\Image\Facades\Image;
 
 
 
+
 class ProductCategoriesController extends Controller
 {
     public function index()

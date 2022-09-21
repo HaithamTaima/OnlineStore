@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\State;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class WorldSeeder extends Seeder
 {
@@ -14,13 +16,7 @@ class WorldSeeder extends Seeder
     public function run()
     {
         $sql_file = public_path('course_ecommerce_world.sql');
-        $db = [
-            'host' => '127.0.0.1',
-            'database' => 'course_ecommerce',
-            'username' => 'root',
-            'password' => 'Ha$root0595791332',
-        ];
+        DB::unprepared(file_get_contents($sql_file));
 
-        exec("mysql --user={$db['username']} --password={$db['password']} --host={$db['host']} --database={$db['database']} < $sql_file");
     }
 }

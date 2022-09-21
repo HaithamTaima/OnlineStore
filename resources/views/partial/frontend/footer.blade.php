@@ -23,7 +23,7 @@
                 <h6 class="text-uppercase mb-3">Social media</h6>
                 <ul class="list-unstyled mb-0">
                     <li><a class="footer-link" href="#">Twitter</a></li>
-                    <li><a class="footer-link" href="#">Instagram</a></li>
+                    <li><a class="footer-link" href="https://www.instagram.com/tec7nostore/">Instagram</a></li>
                     <li><a class="footer-link" href="#">Tumblr</a></li>
                     <li><a class="footer-link" href="#">Pinterest</a></li>
                 </ul>

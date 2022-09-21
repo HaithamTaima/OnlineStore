@@ -15,14 +15,14 @@ class TagSeeder extends Seeder
      */
     public function run()
     {
-        Tag::create(['name' => 'LapTop', 'status' => true]);
-        Tag::create(['name' => 'Phone', 'status' => true]);
-        Tag::create(['name' => 'Watches', 'status' => true]);
-        Tag::create(['name' => 'Electronics', 'status' => true]);
-        Tag::create(['name' => 'Men', 'status' => true]);
-        Tag::create(['name' => 'Women', 'status' => true]);
-        Tag::create(['name' => 'Boys', 'status' => true]);
-        Tag::create(['name' => 'Girls', 'status' => true]);
+        Tag::create(['name' => 'lapTop hp omen', 'status' => true]);
+        Tag::create(['name' => 'lapTop hp pavilion', 'status' => true]);
+        Tag::create(['name' => ' lapTop msi raider', 'status' => true]);
+        Tag::create(['name' => 'lapTop msi vector ', 'status' => true]);
+        Tag::create(['name' => 'NVIDIA GPU', 'status' => true]);
+        Tag::create(['name' => 'Controllers', 'status' => true]);
+        Tag::create(['name' => 'Mice', 'status' => true]);
+        Tag::create(['name' => 'Audio', 'status' => true]);
 
     }
 }

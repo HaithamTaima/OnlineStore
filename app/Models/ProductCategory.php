@@ -11,7 +11,7 @@ class ProductCategory extends Model
 {
     use HasFactory, Sluggable, SearchableTrait;
 
-    protected $guarded = [];
+    protected $guarded =[''];
 
     public function sluggable(): array
     {

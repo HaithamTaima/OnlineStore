@@ -16,7 +16,7 @@ use Nicolaslopezj\Searchable\SearchableTrait;
 class Product extends Model
 {
     use SearchableTrait,HasFactory, Sluggable;
-    protected $guarded = [];
+    protected $guarded =[];
 
     public function sluggable(): array
     {

@@ -65,7 +65,7 @@
                         </div>
                         <div class="col-md-6 text-md-right">
                             @if (Cart::instance('default')->count() > 0)
-                                <a class="btn btn-outline-dark btn-sm" href="{{ route('frontend.checkout') }}">
+                                <a class="btn btn-outline-dark btn-sm" href="{{ route('frontend.checkout')}}">
                                     Proceed to checkout <i class="fas fa-long-arrow-alt-right ml-2"></i>
                                 </a>
                             @endif
