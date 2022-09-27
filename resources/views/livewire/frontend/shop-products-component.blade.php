@@ -1,4 +1,4 @@
-<form action="{{ route('admin.products.index') }}" method="get">
+<form action="{{ route('frontend.shop') }}" method="get">
 <div>
     <section class="py-5">
         <div class="container p-0">

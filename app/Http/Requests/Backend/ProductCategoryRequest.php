@@ -27,7 +27,7 @@ class ProductCategoryRequest extends FormRequest
             case 'POST':
             {
                 return [
-                    'name' => 'required|max:255|unique:product_categories,name',
+                    'name' => 'required|max:255|unique:product_categories',
                     'status' => 'required',
                     'parent_id' => 'nullable',
                     'cover' => 'required|mimes:jpg,jpeg,png|max:2000',
@@ -46,4 +46,5 @@ class ProductCategoryRequest extends FormRequest
             default: break;
         }
     }
+
 }

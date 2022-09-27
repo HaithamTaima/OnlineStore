@@ -4,6 +4,7 @@ use App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Frontend;
 
+use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Database\Eloquent\Builder;
@@ -15,7 +16,8 @@ Route::get('/',[Frontend\FrontendController::class,'index'])->name('frontend.ind
 
 
 Route::get('/shop/{slug?}', [Frontend\FrontendController::class, 'shop'])->name('frontend.shop');
-Route::get('/shop/tags/{slug}', [Frontend\FrontendController::class, 'shop_tag'])->name('frontend.shop_tag');Route::get('/product/{slug?}', [FrontendController::class, 'product'])->name('frontend.product');
+Route::get('/shop/tags/{slug}', [Frontend\FrontendController::class, 'shop_tag'])->name('frontend.shop_tag');
+Route::get('/product/{slug?}', [FrontendController::class, 'product'])->name('frontend.product');
 Route::get('/product/{slug?}', [Frontend\FrontendController::class, 'product'])->name('frontend.product');
 Route::get('/cart', [Frontend\FrontendController::class, 'cart'])->name('frontend.cart');
 Route::get('/wishlist', [Frontend\FrontendController::class, 'wishlist'])->name('frontend.wishlist');
